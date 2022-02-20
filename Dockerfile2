@@ -1,0 +1,7 @@
+FROM centos
+MAINTAINER tawfiq.msani@gmail.com
+COPY /.index.html /var/www/html
+RUN yum update -y 
+RUN yum install httpd -y
+EXPOSE 80
+CMD apachectl -D FOREGROUND
